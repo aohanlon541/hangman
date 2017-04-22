@@ -28,6 +28,7 @@ h1 {
 .hangmanBox {
 	width: 90%;
 	padding: 8em;
+	text-align: center; 
 }
 
 .row {
@@ -39,13 +40,18 @@ h1 {
 	background-color: darkgrey;
 }
 
+#bigBox {
+	font-size: 20px;
+
+}
+
 
 footer {
 	text-align: center;
 	padding: 20px;
 	background-color: #333;
 	color: white;
-	position: absolute;
+	position: relative;
 	bottom: 0;
 	width: 100%;
 }

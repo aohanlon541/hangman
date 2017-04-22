@@ -26,7 +26,7 @@ document.getElementById("currentWord").innerHTML = ("_ ".repeat(totalUnderscores
 var tries = 10;
 //print into HTML
 var triesCountHtml = ("<p>" + tries + " tries left </p>");
-	document.getElementById("triesCount").innerHTML = triesCountHtml;
+var youLoseHtml = ("<p>You lose!</p>");
 
 //function to subtract tries 
 
@@ -41,10 +41,10 @@ function subtractTries(num) {
 	else {
 		var triesCountHtml = ("<p> No tries left - Refresh to play again</p>");
 		document.getElementById("triesCount").innerHTML = triesCountHtml;
+		document.getElementById("bigBox").innerHTML = youLoseHtml;
+
 	}	
 }
-
-// var onButtonClick = btn.onclick;
 subtractTries(btn.onclick);
 
 
