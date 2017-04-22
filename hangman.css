@@ -35,6 +35,10 @@ h1 {
 
 }
 
+.buttonsAlphabet:visited {
+	display: none;
+}
+
 
 footer {
 	text-align: center;

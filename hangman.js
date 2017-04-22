@@ -6,31 +6,40 @@ var alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m",
 for (var i = 0; i < alphabet.length; i++) {
         var btn = document.createElement("button");              
 		var t = document.createTextNode(alphabet[i]);
+		btn.className = "buttonsAlphabet";
 		btn.appendChild(t);                                          
-		document.getElementById("buttonsAlphabet").appendChild(btn); 
+		document.getElementById("buttonsContainer").appendChild(btn); 
     }
 //To make a game of hangman, I need to have words that randomly selected
 
 var hangmanWords = ["pumpkin", "coffee", "pineapples", "chocolate"];
 var chosenWord = hangmanWords[Math.floor(Math.random() * hangmanWords.length)];
-//to make sure it words
+//to make sure it words -- not necessary 
 console.log(chosenWord);
 console.log(chosenWord.length);
-
-//Based on the chosen word, need to make a specifc amount of underscores ("_") for each character
 
 // var currentWordLength = chosenWord.legnth
 
 var totalUnderscores = chosenWord.length;
 
+//Based on the chosen word, need to make a specifc amount of underscores ("_") for each character
+
 document.getElementById("currentWord").innerHTML = ("_ ".repeat(totalUnderscores));  
 
+// Need to establish number a tries somebody gets per game
+
+var tries = 10;
+var triesCountHtml = ("<p>" + tries + "left </p>");
+
+//print into HTML
+	
+document.getElementById("triesCount").innerHTML = triesCountHtml;
 
 
 
-
-// Need to establish number a tries somebody gets per game.
 // When a letter is pressed it needs disappear & count against the guesses
+
+
 
 // When the right letter is pressed by the user, the underscore(s) needs to disappear
 // Correct letter needs to fill in in the spaces that it corresponds to
