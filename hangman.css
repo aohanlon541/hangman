@@ -35,8 +35,8 @@ h1 {
 
 }
 
-.buttonsAlphabet:visited {
-	display: none;
+.button:visited {
+	background-color: darkgrey;
 }
 
 
