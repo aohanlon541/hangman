@@ -36,8 +36,8 @@ h1 {
 
 }
 
-.button:visited {
-	background-color: darkgrey;
+.buttonAbc {
+	display: hide;
 }
 
 #bigBox {
