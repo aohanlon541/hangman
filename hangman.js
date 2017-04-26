@@ -5,7 +5,7 @@ var alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m",
 
 
 //To make a game of hangman, I need to have words that randomly selected
-var hangmanWords = ["tacos", "kombucha", "wine", "lion", "milkshake", "zebra" ];
+var hangmanWords = ["tacos", "kombucha", "zilker", "dogs", "rainey", "bats", "hipster", "capit"];
 var chosenWord = hangmanWords[Math.floor(Math.random() * hangmanWords.length)];
 //to make sure it words -- not necessary 
 console.log(chosenWord);
@@ -20,13 +20,11 @@ document.getElementById("currentWord").innerHTML = underscore;
 // Need to establish number a tries somebody gets per game
 var tries = 10;
 //print into HTML
-var triesCountHtml = ("<p>" + tries + " tries left </p>");
 var youLoseHtml = ("<p>You lose!</p>");
 
 //function to subtract tries 
-
  
-function subtractTries(num) { 
+function subtractTries() { 
 	if (tries > 0) {
 		tries--;	
 		console.log(tries);
@@ -42,7 +40,8 @@ function subtractTries(num) {
 	}	
 }
 
-// subtractTries(btn.onclick);
+subtractTries();
+
 
 // var btnLetter = document.getElementsByClassName("buttonAbc");
 // for (i = 0; i < alphabet.length; i++) {
@@ -65,6 +64,13 @@ function subtractTries(num) {
 // 	}
 // }
 
+// var btnLetter = document.getElementsByClassName("buttonAbc");
+
+// btnLetter.visited = function disableBtn() {
+// 	document.getElementsByClassName("buttonAbc").style.color = "red";
+
+// }
+
 //a
 var btnA = document.getElementById("btnA");
 btnA.onclick = function printValue() {
@@ -75,9 +81,8 @@ btnA.onclick = function printValue() {
 	 	var tA = document.createTextNode("A, "); 
 	 	spanA.appendChild(tA);  
 	 	document.getElementById("letterCount").appendChild(spanA);
-	 }
+}
 	 else {
-	 	console.log("letter a is in this words")
 	 	// document.getElementById("currentWord").innerHTML = btn.value;
 	 	var textnodeA = document.createTextNode("A");
 	 	var itemA = document.getElementById("currentWord").childNodes[letterPlacement];
@@ -96,7 +101,6 @@ btnB.onclick = function printValue() {
 	 	document.getElementById("letterCount").appendChild(spanB);
 	 }
 	 else {
-	 	console.log("letter b is in this words")
 	 	// document.getElementById("currentWord").innerHTML = btn.value;
 	 	var textnodeB = document.createTextNode("B");
 	 	var itemB = document.getElementById("currentWord").childNodes[letterPlacement];
@@ -115,7 +119,6 @@ btnC.onclick = function printValue() {
 	 	document.getElementById("letterCount").appendChild(spanC);
 	 }
 	 else {
-	 	console.log("letter c is in this words")
 	 	// document.getElementById("currentWord").innerHTML = btn.value;
 	 	var textnodeC = document.createTextNode("C");
 	 	var itemC = document.getElementById("currentWord").childNodes[letterPlacement];
@@ -134,7 +137,6 @@ btnD.onclick = function printValue() {
 	 	document.getElementById("letterCount").appendChild(spanD);
 	 }
 	 else {
-	 	console.log("letter d is in this words")
 	 	// document.getElementById("currentWord").innerHTML = btn.value;
 	 	var textnodeD = document.createTextNode("D");
 	 	var itemD = document.getElementById("currentWord").childNodes[letterPlacement];
@@ -153,9 +155,7 @@ btnE.onclick = function printValue() {
 	 	document.getElementById("letterCount").appendChild(spanE);
 	 }
 	 else {
-	 	console.log("letter E is in this words")
-	 	// document.getElementById("currentWord").innerHTML = btn.value;
-	 	var textnodeE = document.createTextNode("E");
+		var textnodeE = document.createTextNode("E");
 	 	var itemE = document.getElementById("currentWord").childNodes[letterPlacement];
 	 	itemE.replaceChild(textnodeE, itemE.childNodes[0]);
 	 }
@@ -172,7 +172,6 @@ btnF.onclick = function printValue() {
 	 	document.getElementById("letterCount").appendChild(spanF);
 	 }
 	 else {
-	 	console.log("letter F is in this words")
 	 	// document.getElementById("currentWord").innerHTML = btn.value;
 	 	var textnodeF = document.createTextNode("F");
 	 	var itemF = document.getElementById("currentWord").childNodes[letterPlacement];
@@ -191,7 +190,6 @@ btnG.onclick = function printValue() {
 	 	document.getElementById("letterCount").appendChild(spanG);
 	 }
 	 else {
-	 	console.log("letter G is in this words")
 	 	// document.getElementById("currentWord").innerHTML = btn.value;
 	 	var textnodeG = document.createTextNode("G");
 	 	var itemG = document.getElementById("currentWord").childNodes[letterPlacement];
@@ -210,7 +208,6 @@ btnH.onclick = function printValue() {
 	 	document.getElementById("letterCount").appendChild(spanH);
 	 }
 	 else {
-	 	console.log("letter H is in this words")
 	 	// document.getElementById("currentWord").innerHTML = btn.value;
 	 	var textnodeH = document.createTextNode("H");
 	 	var itemH = document.getElementById("currentWord").childNodes[letterPlacement];
@@ -229,7 +226,6 @@ btnI.onclick = function printValue() {
 	 	document.getElementById("letterCount").appendChild(spanI);
 	 }
 	 else {
-	 	console.log("letter I is in this words")
 	 	// document.getElementById("currentWord").innerHTML = btn.value;
 	 	var textnodeI = document.createTextNode("I");
 	 	var itemI = document.getElementById("currentWord").childNodes[letterPlacement];
@@ -248,7 +244,6 @@ btnJ.onclick = function printValue() {
 	 	document.getElementById("letterCount").appendChild(spanJ);
 	 }
 	 else {
-	 	console.log("letter J is in this words")
 	 	// document.getElementById("currentWord").innerHTML = btn.value;
 	 	var textnodeJ = document.createTextNode("J");
 	 	var itemJ = document.getElementById("currentWord").childNodes[letterPlacement];
@@ -267,7 +262,6 @@ btnK.onclick = function printValue() {
 	 	document.getElementById("letterCount").appendChild(spanK);
 	 }
 	 else {
-	 	console.log("letter K is in this words")
 	 	// document.getElementById("currentWord").innerHTML = btn.value;
 	 	var textnodeK = document.createTextNode("K");
 	 	var itemK = document.getElementById("currentWord").childNodes[letterPlacement];
@@ -286,7 +280,6 @@ btnL.onclick = function printValue() {
 	 	document.getElementById("letterCount").appendChild(spanL);
 	 }
 	 else {
-	 	console.log("letter L is in this words")
 	 	// document.getElementById("currentWord").innerHTML = btn.value;
 	 	var textnodeL = document.createTextNode("L");
 	 	var itemL = document.getElementById("currentWord").childNodes[letterPlacement];
@@ -305,7 +298,6 @@ btnM.onclick = function printValue() {
 	 	document.getElementById("letterCount").appendChild(spanM);
 	 }
 	 else {
-	 	console.log("letter M is in this words")
 	 	// document.getElementById("currentWord").innerHTML = btn.value;
 	 	var textnodeM = document.createTextNode("M");
 	 	var itemM = document.getElementById("currentWord").childNodes[letterPlacement];
@@ -324,7 +316,6 @@ btnN.onclick = function printValue() {
 	 	document.getElementById("letterCount").appendChild(spanN);
 	 }
 	 else {
-	 	console.log("letter N is in this words")
 	 	// document.getElementById("currentWord").innerHTML = btn.value;
 	 	var textnodeN = document.createTextNode("N");
 	 	var itemN = document.getElementById("currentWord").childNodes[letterPlacement];
@@ -343,7 +334,6 @@ btnO.onclick = function printValue() {
 	 	document.getElementById("letterCount").appendChild(spanO);
 	 }
 	 else {
-	 	console.log("letter o is in this words")
 	 	// document.getElementById("currentWord").innerHTML = btn.value;
 	 	var textnodeO = document.createTextNode("O");
 	 	var itemO = document.getElementById("currentWord").childNodes[letterPlacement];
@@ -362,9 +352,8 @@ btnP.onclick = function printValue() {
 	 	document.getElementById("letterCount").appendChild(spanP);
 	 }
 	 else {
-	 	console.log("letter P is in this words")
 	 	// document.getElementById("currentWord").innerHTML = btn.value;
-	 	var textnodeP = document.createTextNode("N");
+	 	var textnodeP = document.createTextNode("P");
 	 	var itemP = document.getElementById("currentWord").childNodes[letterPlacement];
 	 	itemP.replaceChild(textnodeP, itemP.childNodes[0]);
 	 }
@@ -381,7 +370,6 @@ btnQ.onclick = function printValue() {
 	 	document.getElementById("letterCount").appendChild(spanQ);
 	 }
 	 else {
-	 	console.log("letter Q is in this words")
 	 	// document.getElementById("currentWord").innerHTML = btn.value;
 	 	var textnodeQ = document.createTextNode("Q");
 	 	var itemQ = document.getElementById("currentWord").childNodes[letterPlacement];
@@ -391,7 +379,7 @@ btnQ.onclick = function printValue() {
 //r
 var btnR = document.getElementById("btnR");
 btnR.onclick = function printValue() {
-	var letterPlacement = chosenWord.indexOf("R");
+	var letterPlacement = chosenWord.indexOf("r");
 	console.log(letterPlacement);
 	 if (letterPlacement === -1) {
 	 	var spanR = document.createElement("span");
@@ -400,7 +388,6 @@ btnR.onclick = function printValue() {
 	 	document.getElementById("letterCount").appendChild(spanR);
 	 }
 	 else {
-	 	console.log("letter R is in this words")
 	 	// document.getElementById("currentWord").innerHTML = btn.value;
 	 	var textnodeR = document.createTextNode("R");
 	 	var itemR = document.getElementById("currentWord").childNodes[letterPlacement];
@@ -410,7 +397,7 @@ btnR.onclick = function printValue() {
 //s
 var btnS = document.getElementById("btnS");
 btnS.onclick = function printValue() {
-	var letterPlacement = chosenWord.indexOf("S");
+	var letterPlacement = chosenWord.indexOf("s");
 	console.log(letterPlacement);
 	 if (letterPlacement === -1) {
 	 	var spanS = document.createElement("span");
@@ -419,7 +406,6 @@ btnS.onclick = function printValue() {
 	 	document.getElementById("letterCount").appendChild(spanS);
 	 }
 	 else {
-	 	console.log("letter S is in this words")
 	 	// document.getElementById("currentWord").innerHTML = btn.value;
 	 	var textnodeS = document.createTextNode("S");
 	 	var itemS = document.getElementById("currentWord").childNodes[letterPlacement];
@@ -429,7 +415,7 @@ btnS.onclick = function printValue() {
 //t
 var btnT = document.getElementById("btnT");
 btnT.onclick = function printValue() {
-	var letterPlacement = chosenWord.indexOf("T");
+	var letterPlacement = chosenWord.indexOf("t");
 	console.log(letterPlacement);
 	 if (letterPlacement === -1) {
 	 	var spanT = document.createElement("span");
@@ -438,7 +424,6 @@ btnT.onclick = function printValue() {
 	 	document.getElementById("letterCount").appendChild(spanT);
 	 }
 	 else {
-	 	console.log("letter T is in this words")
 	 	// document.getElementById("currentWord").innerHTML = btn.value;
 	 	var textnodeT = document.createTextNode("T");
 	 	var itemT = document.getElementById("currentWord").childNodes[letterPlacement];
@@ -448,7 +433,7 @@ btnT.onclick = function printValue() {
 //u
 var btnU = document.getElementById("btnU");
 btnU.onclick = function printValue() {
-	var letterPlacement = chosenWord.indexOf("U");
+	var letterPlacement = chosenWord.indexOf("u");
 	console.log(letterPlacement);
 	 if (letterPlacement === -1) {
 	 	var spanU = document.createElement("span");
@@ -457,7 +442,6 @@ btnU.onclick = function printValue() {
 	 	document.getElementById("letterCount").appendChild(spanU);
 	 }
 	 else {
-	 	console.log("letter U is in this words")
 	 	// document.getElementById("currentWord").innerHTML = btn.value;
 	 	var textnodeU = document.createTextNode("U");
 	 	var itemU = document.getElementById("currentWord").childNodes[letterPlacement];
@@ -467,7 +451,7 @@ btnU.onclick = function printValue() {
 //v
 var btnV = document.getElementById("btnV");
 btnV.onclick = function printValue() {
-	var letterPlacement = chosenWord.indexOf("V");
+	var letterPlacement = chosenWord.indexOf("v");
 	console.log(letterPlacement);
 	 if (letterPlacement === -1) {
 	 	var spanV = document.createElement("span");
@@ -476,17 +460,16 @@ btnV.onclick = function printValue() {
 	 	document.getElementById("letterCount").appendChild(spanV);
 	 }
 	 else {
-	 	console.log("letter V is in this words")
 	 	// document.getElementById("currentWord").innerHTML = btn.value;
 	 	var textnodeV = document.createTextNode("V");
 	 	var itemV = document.getElementById("currentWord").childNodes[letterPlacement];
 	 	itemV.replaceChild(textnodeV, itemV.childNodes[0]);
 	 }
 	}
-//w
+//W
 var btnW = document.getElementById("btnW");
 btnW.onclick = function printValue() {
-	var letterPlacement = chosenWord.indexOf("W");
+	var letterPlacement = chosenWord.indexOf("w");
 	console.log(letterPlacement);
 	 if (letterPlacement === -1) {
 	 	var spanW = document.createElement("span");
@@ -495,7 +478,6 @@ btnW.onclick = function printValue() {
 	 	document.getElementById("letterCount").appendChild(spanW);
 	 }
 	 else {
-	 	console.log("letter W is in this words")
 	 	// document.getElementById("currentWord").innerHTML = btn.value;
 	 	var textnodeW = document.createTextNode("W");
 	 	var itemW = document.getElementById("currentWord").childNodes[letterPlacement];
@@ -505,7 +487,7 @@ btnW.onclick = function printValue() {
 //X
 var btnX = document.getElementById("btnX");
 btnX.onclick = function printValue() {
-	var letterPlacement = chosenWord.indexOf("X");
+	var letterPlacement = chosenWord.indexOf("x");
 	console.log(letterPlacement);
 	 if (letterPlacement === -1) {
 	 	var spanX = document.createElement("span");
@@ -514,17 +496,16 @@ btnX.onclick = function printValue() {
 	 	document.getElementById("letterCount").appendChild(spanX);
 	 }
 	 else {
-	 	console.log("letter Y is in this words")
 	 	// document.getElementById("currentWord").innerHTML = btn.value;
-	 	var textnodeY = document.createTextNode("y");
-	 	var itemY = document.getElementById("currentWord").childNodes[letterPlacement];
-	 	itemY.replaceChild(textnodeY, itemY.childNodes[0]);
+	 	var textnodeX = document.createTextNode("X");
+	 	var itemX = document.getElementById("currentWord").childNodes[letterPlacement];
+	 	itemX.replaceChild(textnodeX, itemX.childNodes[0]);
 	 }
 	}
 //Y
 var btnY = document.getElementById("btnY");
 btnY.onclick = function printValue() {
-	var letterPlacement = chosenWord.indexOf("Y");
+	var letterPlacement = chosenWord.indexOf("y");
 	console.log(letterPlacement);
 	 if (letterPlacement === -1) {
 	 	var spanY = document.createElement("span");
@@ -533,7 +514,6 @@ btnY.onclick = function printValue() {
 	 	document.getElementById("letterCount").appendChild(spanY);
 	 }
 	 else {
-	 	console.log("letter Y is in this words")
 	 	// document.getElementById("currentWord").innerHTML = btn.value;
 	 	var textnodeY = document.createTextNode("y");
 	 	var itemY = document.getElementById("currentWord").childNodes[letterPlacement];
@@ -552,7 +532,6 @@ btnZ.onclick = function printValue() {
 	 	document.getElementById("letterCount").appendChild(spanZ);
 	 }
 	 else {
-	 	console.log("letter z is in this words")
 	 	// document.getElementById("currentWord").innerHTML = btn.value;
 	 	var textnodeZ = document.createTextNode("Z");
 	 	var itemZ= document.getElementById("currentWord").childNodes[letterPlacement];
@@ -566,11 +545,10 @@ btnZ.onclick = function printValue() {
 
 
 
-// When the right letter is pressed by the user, the underscore(s) needs to disappear
-// Correct letter needs to fill in in the spaces that it corresponds to
 
-// When the wrong letter is pressed, it needs to go into the "wrong letter section"
-// Wrong letter needs to create a line on a stick figure
+// Stick Figure
+
+//
 
 // When the game is over (either by too many tries or winning), need to change 
 // the hangman to "you win!" or "you lose!"

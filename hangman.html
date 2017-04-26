@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
-	<title>Hangman</title>
+	<title>Austin Hangman</title>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<link href="hangman.css" rel="stylesheet" type="text/css">
@@ -12,11 +12,10 @@
 
 </head>
 <body>
+	<div class="jumbotron">
+		<h1><img src="https://d30y9cdsu7xlg0.cloudfront.net/png/164719-200.png" width="100px"> Austin Hangman</h1>
+	</div>
 	<div class="container">
-		<div class="page-header">
-			<h1>Hangman</h1>
-		</div>
-
 		<div class="row">
 			<div class="panel panel-default">
  				<div class="panel-body hangmanBox"
@@ -35,33 +34,33 @@
 		<div class="row">
 			<div class="panel panel-default">
  				<div class="panel-body">
- 					<div id="buttonDiv">
- 						<button id="btnA" class="buttonAbc" value="a">A</button>
- 						<button id="btnB" class="buttonAbc" value="b">B</button>
- 						<button id="btnC" class="buttonAbc" value="c">C</button>
- 						<button id="btnD" class="buttonAbc" value="d">D</button>
- 						<button id="btnE" class="buttonAbc" value="e">E</button>
- 						<button id="btnF" class="buttonAbc" value="f">F</button>
-						<button id="btnG" class="buttonAbc" value="g">G</button>
- 						<button id="btnH" class="buttonAbc" value="h">H</button>
- 						<button id="btnI" class="buttonAbc" value="h">I</button>
- 						<button id="btnJ" class="buttonAbc" value="j">J</button>
- 						<button id="btnK" class="buttonAbc" value="k">K</button>
- 						<button id="btnL" class="buttonAbc" value="l">L</button>
- 						<button id="btnM" class="buttonAbc" value="m">M</button>
- 						<button id="btnN" class="buttonAbc" value="n">N</button>
- 						<button id="btnO" class="buttonAbc" value="o">O</button>
-						<button id="btnP" class="buttonAbc" value="p">P</button>
- 						<button id="btnQ" class="buttonAbc" value="q">Q</button>
- 						<button id="btnR" class="buttonAbc" value="r">R</button>
- 						<button id="btnS" class="buttonAbc" value="s">S</button>
- 						<button id="btnT" class="buttonAbc" value="t">T</button>
- 						<button id="btnU" class="buttonAbc" value="u">U</button>
-						<button id="btnV" class="buttonAbc" value="v">V</button>
- 						<button id="btnW" class="buttonAbc" value="w">W</button>
- 						<button id="btnX" class="buttonAbc" value="x">X</button>
- 						<button id="btnY" class="buttonAbc" value="y">Y</button>
- 						<button id="btnZ" class="buttonAbc" value="z">Z</button>
+ 					<div class="btn-group" role="group" id="buttonDiv">
+ 						<button id="btnA" class="buttonAbc btn btn-default" value="a" onclick="disableBtn()">A</button>
+ 						<button id="btnB" class="buttonAbc btn btn-default" value="b">B</button>
+ 						<button id="btnC" class="buttonAbc btn btn-default" value="c">C</button>
+ 						<button id="btnD" class="buttonAbc btn btn-default" value="d">D</button>
+ 						<button id="btnE" class="buttonAbc btn btn-default" value="e">E</button>
+ 						<button id="btnF" class="buttonAbc btn btn-default" value="f">F</button>
+						<button id="btnG" class="buttonAbc btn btn-default" value="g">G</button>
+ 						<button id="btnH" class="buttonAbc btn btn-default" value="h">H</button>
+ 						<button id="btnI" class="buttonAbc btn btn-default" value="h">I</button>
+ 						<button id="btnJ" class="buttonAbc btn btn-default" value="j">J</button>
+ 						<button id="btnK" class="buttonAbc btn btn-default" value="k">K</button>
+ 						<button id="btnL" class="buttonAbc btn btn-default" value="l">L</button>
+ 						<button id="btnM" class="buttonAbc btn btn-default" value="m">M</button>
+ 						<button id="btnN" class="buttonAbc btn btn-default" value="n">N</button>
+ 						<button id="btnO" class="buttonAbc btn btn-default" value="o">O</button>
+						<button id="btnP" class="buttonAbc btn btn-default" value="p">P</button>
+ 						<button id="btnQ" class="buttonAbc btn btn-default" value="q">Q</button>
+ 						<button id="btnR" class="buttonAbc btn btn-default" value="r">R</button>
+ 						<button id="btnS" class="buttonAbc btn btn-default" value="s">S</button>
+ 						<button id="btnT" class="buttonAbc btn btn-default" value="t">T</button>
+ 						<button id="btnU" class="buttonAbc btn btn-default" value="u">U</button>
+						<button id="btnV" class="buttonAbc btn btn-default" value="v">V</button>
+ 						<button id="btnW" class="buttonAbc btn btn-default" value="w">W</button>
+ 						<button id="btnX" class="buttonAbc btn btn-default" value="x">X</button>
+ 						<button id="btnY" class="buttonAbc btn btn-default" value="y">Y</button>
+ 						<button id="btnZ" class="buttonAbc btn btn-default" value="z">Z</button>
  				</div>
  			</div>	
 		</div>

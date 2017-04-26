@@ -3,16 +3,16 @@
 } 
 
 body {
-	background-color: #ADD8E6;
+	background-color: #D9D9D6;
 }
 
-.container {
-	margin: 0 auto;
-}
-
-.page-header {
+.jumbotron {
+	margin: 0 auto 10px auto;
 	text-align: center;
 	margin-top: 0;
+	background-color: #BCC9C5;
+	height: 12em;
+	padding-top: 1em;
 }
 
 h1, h2, h3, h4, p, li {
@@ -23,6 +23,9 @@ h1 {
 	text-transform: uppercase;
 	letter-spacing: 5px;
 	font-size: 50px;
+}
+img {
+	margin-right: .5em;
 }
 
 .hangmanBox {
@@ -36,8 +39,8 @@ h1 {
 
 }
 
-.buttonAbc {
-	display: hide;
+#currentWord, .panel-body {
+	text-align: center;
 }
 
 #bigBox {
@@ -45,13 +48,20 @@ h1 {
 
 }
 
+span {
+	padding: .25em;
+}
 
 footer {
 	text-align: center;
 	padding: 20px;
 	background-color: #333;
 	color: white;
-	position: relative;
+	position: absolute;
 	bottom: 0;
+	right: 0;
+	left: 0;
 	width: 100%;
+	font-family: 'Open Sans Condensed', sans-serif;
+
 }
