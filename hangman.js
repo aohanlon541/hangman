@@ -23,6 +23,9 @@ var tries = 10;
 var youLoseHtml = ("<p>You lose!</p>");
 
 //function to subtract tries 
+
+var disabledBtn = document.getElementsByClassName("buttonAbc");
+
  
 function subtractTries() { 
 	if (tries > 0) {
@@ -32,15 +35,17 @@ function subtractTries() {
 		document.getElementById("triesCount").innerHTML = triesCountHtml;
 	}
 	
-	else {
+	else if (tries === 0) {
 		var triesCountHtml = ("<p> No tries left - Refresh to play again</p>");
 		document.getElementById("triesCount").innerHTML = triesCountHtml;
 		document.getElementById("bigBox").innerHTML = youLoseHtml;
-
-	}	
+		disabledBtn.disable = true;
+	}
 }
 
 subtractTries();
+
+
 
 
 // var btnLetter = document.getElementsByClassName("buttonAbc");
@@ -77,6 +82,7 @@ btnA.onclick = function printValue() {
 	var letterPlacement = chosenWord.indexOf("a");
 	console.log(letterPlacement);
 	 if (letterPlacement === -1) {
+	 	subtractTries();
 	 	var spanA = document.createElement("span");
 	 	var tA = document.createTextNode("A, "); 
 	 	spanA.appendChild(tA);  
@@ -95,6 +101,7 @@ btnB.onclick = function printValue() {
 	var letterPlacement = chosenWord.indexOf("b");
 	console.log(letterPlacement);
 	 if (letterPlacement === -1) {
+	 	subtractTries();
 	 	var spanB = document.createElement("span");
 	 	var tB = document.createTextNode("B, "); 
 	 	spanB.appendChild(tB);  
@@ -113,6 +120,7 @@ btnC.onclick = function printValue() {
 	var letterPlacement = chosenWord.indexOf("c");
 	console.log(letterPlacement);
 	 if (letterPlacement === -1) {
+	 	subtractTries();
 	 	var spanC = document.createElement("span");
 	 	var tC = document.createTextNode("C, "); 
 	 	spanC.appendChild(tC);  
@@ -131,6 +139,7 @@ btnD.onclick = function printValue() {
 	var letterPlacement = chosenWord.indexOf("d");
 	console.log(letterPlacement);
 	 if (letterPlacement === -1) {
+	 	subtractTries();
 	 	var spanD = document.createElement("span");
 	 	var tD = document.createTextNode("D, "); 
 	 	spanD.appendChild(tD);  
@@ -149,6 +158,7 @@ btnE.onclick = function printValue() {
 	var letterPlacement = chosenWord.indexOf("e");
 	console.log(letterPlacement);
 	 if (letterPlacement === -1) {
+	 	subtractTries();
 	 	var spanE = document.createElement("span");
 	 	var tE = document.createTextNode("E, "); 
 	 	spanE.appendChild(tE);  
@@ -166,6 +176,7 @@ btnF.onclick = function printValue() {
 	var letterPlacement = chosenWord.indexOf("f");
 	console.log(letterPlacement);
 	 if (letterPlacement === -1) {
+	 	subtractTries();
 	 	var spanF = document.createElement("span");
 	 	var tF = document.createTextNode("F, "); 
 	 	spanF.appendChild(tF);  
@@ -184,6 +195,7 @@ btnG.onclick = function printValue() {
 	var letterPlacement = chosenWord.indexOf("g");
 	console.log(letterPlacement);
 	 if (letterPlacement === -1) {
+	 	subtractTries();
 	 	var spanG = document.createElement("span");
 	 	var tG = document.createTextNode("G, "); 
 	 	spanG.appendChild(tG);  
@@ -202,6 +214,7 @@ btnH.onclick = function printValue() {
 	var letterPlacement = chosenWord.indexOf("h");
 	console.log(letterPlacement);
 	 if (letterPlacement === -1) {
+	 	subtractTries();
 	 	var spanH = document.createElement("span");
 	 	var tH = document.createTextNode("H, "); 
 	 	spanH.appendChild(tH);  
@@ -220,6 +233,7 @@ btnI.onclick = function printValue() {
 	var letterPlacement = chosenWord.indexOf("i");
 	console.log(letterPlacement);
 	 if (letterPlacement === -1) {
+	 	subtractTries();
 	 	var spanI = document.createElement("span");
 	 	var tI = document.createTextNode("I, "); 
 	 	spanI.appendChild(tI);  
@@ -238,6 +252,7 @@ btnJ.onclick = function printValue() {
 	var letterPlacement = chosenWord.indexOf("j");
 	console.log(letterPlacement);
 	 if (letterPlacement === -1) {
+	 	subtractTries();
 	 	var spanJ = document.createElement("span");
 	 	var tJ = document.createTextNode("J, "); 
 	 	spanJ.appendChild(tJ);  
@@ -256,6 +271,7 @@ btnK.onclick = function printValue() {
 	var letterPlacement = chosenWord.indexOf("k");
 	console.log(letterPlacement);
 	 if (letterPlacement === -1) {
+	 	subtractTries();
 	 	var spanK = document.createElement("span");
 	 	var tK = document.createTextNode("K, "); 
 	 	spanK.appendChild(tK);  
@@ -274,6 +290,7 @@ btnL.onclick = function printValue() {
 	var letterPlacement = chosenWord.indexOf("l");
 	console.log(letterPlacement);
 	 if (letterPlacement === -1) {
+	 	subtractTries();
 	 	var spanL = document.createElement("span");
 	 	var tL = document.createTextNode("L, "); 
 	 	spanL.appendChild(tL);  
@@ -292,6 +309,7 @@ btnM.onclick = function printValue() {
 	var letterPlacement = chosenWord.indexOf("m");
 	console.log(letterPlacement);
 	 if (letterPlacement === -1) {
+	 	subtractTries();
 	 	var spanM = document.createElement("span");
 	 	var tM = document.createTextNode("M, "); 
 	 	spanM.appendChild(tM);  
@@ -310,6 +328,7 @@ btnN.onclick = function printValue() {
 	var letterPlacement = chosenWord.indexOf("n");
 	console.log(letterPlacement);
 	 if (letterPlacement === -1) {
+	 	subtractTries();
 	 	var spanN = document.createElement("span");
 	 	var tN = document.createTextNode("N, "); 
 	 	spanN.appendChild(tN);  
@@ -328,6 +347,7 @@ btnO.onclick = function printValue() {
 	var letterPlacement = chosenWord.indexOf("o");
 	console.log(letterPlacement);
 	 if (letterPlacement === -1) {
+	 	subtractTries();
 	 	var spanO = document.createElement("span");
 	 	var tO = document.createTextNode("O, "); 
 	 	spanO.appendChild(tO);  
@@ -346,6 +366,7 @@ btnP.onclick = function printValue() {
 	var letterPlacement = chosenWord.indexOf("p");
 	console.log(letterPlacement);
 	 if (letterPlacement === -1) {
+	 	subtractTries();
 	 	var spanP = document.createElement("span");
 	 	var tP = document.createTextNode("P, "); 
 	 	spanP.appendChild(tP);  
@@ -364,6 +385,7 @@ btnQ.onclick = function printValue() {
 	var letterPlacement = chosenWord.indexOf("q");
 	console.log(letterPlacement);
 	 if (letterPlacement === -1) {
+	 	subtractTries();
 	 	var spanQ = document.createElement("span");
 	 	var tQ = document.createTextNode("Q, "); 
 	 	spanQ.appendChild(tQ);  
@@ -382,6 +404,7 @@ btnR.onclick = function printValue() {
 	var letterPlacement = chosenWord.indexOf("r");
 	console.log(letterPlacement);
 	 if (letterPlacement === -1) {
+	 	subtractTries();
 	 	var spanR = document.createElement("span");
 	 	var tR = document.createTextNode("R, "); 
 	 	spanR.appendChild(tR);  
@@ -400,6 +423,7 @@ btnS.onclick = function printValue() {
 	var letterPlacement = chosenWord.indexOf("s");
 	console.log(letterPlacement);
 	 if (letterPlacement === -1) {
+	 	subtractTries();
 	 	var spanS = document.createElement("span");
 	 	var tS = document.createTextNode("S, "); 
 	 	spanS.appendChild(tS);  
@@ -418,6 +442,7 @@ btnT.onclick = function printValue() {
 	var letterPlacement = chosenWord.indexOf("t");
 	console.log(letterPlacement);
 	 if (letterPlacement === -1) {
+	 	subtractTries();
 	 	var spanT = document.createElement("span");
 	 	var tT = document.createTextNode("T, "); 
 	 	spanT.appendChild(tT);  
@@ -436,6 +461,7 @@ btnU.onclick = function printValue() {
 	var letterPlacement = chosenWord.indexOf("u");
 	console.log(letterPlacement);
 	 if (letterPlacement === -1) {
+	 	subtractTries();
 	 	var spanU = document.createElement("span");
 	 	var tU = document.createTextNode("U, "); 
 	 	spanU.appendChild(tU); 
@@ -454,6 +480,7 @@ btnV.onclick = function printValue() {
 	var letterPlacement = chosenWord.indexOf("v");
 	console.log(letterPlacement);
 	 if (letterPlacement === -1) {
+	 	subtractTries();
 	 	var spanV = document.createElement("span");
 	 	var tV = document.createTextNode("V, "); 
 	 	spanV.appendChild(tV); 
@@ -472,6 +499,7 @@ btnW.onclick = function printValue() {
 	var letterPlacement = chosenWord.indexOf("w");
 	console.log(letterPlacement);
 	 if (letterPlacement === -1) {
+	 	subtractTries();
 	 	var spanW = document.createElement("span");
 	 	var tW = document.createTextNode("W, "); 
 	 	spanW.appendChild(tW); 
@@ -490,6 +518,7 @@ btnX.onclick = function printValue() {
 	var letterPlacement = chosenWord.indexOf("x");
 	console.log(letterPlacement);
 	 if (letterPlacement === -1) {
+	 	subtractTries();
 	 	var spanX = document.createElement("span");
 	 	var tX = document.createTextNode("X, "); 
 	 	spanX.appendChild(tX); 
@@ -508,6 +537,7 @@ btnY.onclick = function printValue() {
 	var letterPlacement = chosenWord.indexOf("y");
 	console.log(letterPlacement);
 	 if (letterPlacement === -1) {
+	 	subtractTries();
 	 	var spanY = document.createElement("span");
 	 	var tY = document.createTextNode("Y, "); 
 	 	spanY.appendChild(tY); 
@@ -526,6 +556,7 @@ btnZ.onclick = function printValue() {
 	var letterPlacement = chosenWord.indexOf("z");
 	console.log(letterPlacement);
 	 if (letterPlacement === -1) {
+	 	subtractTries();
 	 	var spanZ = document.createElement("span");
 	 	var tZ = document.createTextNode("Z, "); 
 	 	spanZ.appendChild(tZ);  
