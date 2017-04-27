@@ -24,8 +24,6 @@ var youLoseHtml = ("<p>You lose!</p>");
 
 //function to subtract tries 
 
-var disabledBtn = document.getElementsByClassName("buttonAbc");
-
  
 function subtractTries() { 
 	if (tries > 0) {
@@ -33,20 +31,118 @@ function subtractTries() {
 		console.log(tries);
 		var triesCountHtml = ("<p>" + tries + " tries left </p>");
 		document.getElementById("triesCount").innerHTML = triesCountHtml;
+			if (tries === 8) {
+				lineOne();
+			}
+			else if (tries === 7) {
+				lineTwo();
+			}
+			else if (tries === 6) {
+				lineThree();
+				lineFour();
+			}
+			else if (tries === 5) {
+				circle();
+			}
+			else if (tries === 4) {
+				lineFive();
+			}
+			else if (tries === 3) {
+				lineSix();
+			}
+			else if (tries === 2) {
+				lineSeven();
+			}
+			else if (tries === 1) {
+				lineEight();
+			}
+			else if (tries === 0) {
+				lineNine();
+				var triesCountHtml = ("");
+				var newDiv = document.createElement("div");
+				var textnode = document.createTextNode(triesCountHtml);
+				document.getElementById("hangmanBox").appendChild(node);    
+			}
+
 	}
 	
-	else if (tries === 0) {
-		var triesCountHtml = ("<p> No tries left - Refresh to play again</p>");
-		document.getElementById("triesCount").innerHTML = triesCountHtml;
-		document.getElementById("bigBox").innerHTML = youLoseHtml;
-		disabledBtn.disable = true;
-	}
 }
 
 subtractTries();
 
+// Stick Figure
 
+function lineOne() {
+  var canvas = document.getElementById("hangmanBox");
+  var context = canvas.getContext("2d");context.beginPath();
+  context.moveTo(500, 145);
+  context.lineTo(200, 145);
+  context.stroke();
+  };
+function lineTwo() {
+  var canvas = document.getElementById("hangmanBox");
+  var context = canvas.getContext("2d");context.beginPath();
+  context.moveTo(200, 145);
+  context.lineTo(200, 20);
+  context.stroke();
+  };
+function lineThree() {
+  var canvas = document.getElementById("hangmanBox");
+  var context = canvas.getContext("2d");context.beginPath();
+  context.moveTo(200, 20);
+  context.lineTo(250, 20);
+  context.stroke();
+  };
+function lineFour() {
+  var canvas = document.getElementById("hangmanBox");
+  var context = canvas.getContext("2d");context.beginPath();
+  context.moveTo(250, 20);
+  context.lineTo(250, 30);
+  context.stroke();
+  };
+function circle() {
+	var canvas = document.getElementById("hangmanBox");
+	var context = canvas.getContext("2d");context.beginPath();
+	context.beginPath();
+	context.arc(250,45,15,0,2*Math.PI);
+	context.stroke();
+	}
+function lineFive() {
+  var canvas = document.getElementById("hangmanBox");
+  var context = canvas.getContext("2d");context.beginPath();
+  context.moveTo(250, 59);
+  context.lineTo(250, 100);
+  context.stroke();
+  };
 
+function lineSix() {
+  var canvas = document.getElementById("hangmanBox");
+  var context = canvas.getContext("2d");context.beginPath();
+  context.moveTo(250, 80);
+  context.lineTo(220, 60);
+  context.stroke();
+  };
+function lineSeven() {
+  var canvas = document.getElementById("hangmanBox");
+  var context = canvas.getContext("2d");context.beginPath();
+  context.moveTo(250, 80);
+  context.lineTo(280, 60);
+  context.stroke();
+  };
+function lineEight() {
+  var canvas = document.getElementById("hangmanBox");
+  var context = canvas.getContext("2d");context.beginPath();
+  context.moveTo(250, 100);
+  context.lineTo(220, 120);
+  context.stroke();
+  };
+function lineNine() {
+  var canvas = document.getElementById("hangmanBox");
+  var context = canvas.getContext("2d");context.beginPath();
+  context.moveTo(250, 100);
+  context.lineTo(280, 120);
+  context.stroke();
+  };
 
 // var btnLetter = document.getElementsByClassName("buttonAbc");
 // for (i = 0; i < alphabet.length; i++) {
@@ -87,7 +183,8 @@ btnA.onclick = function printValue() {
 	 	var tA = document.createTextNode("A, "); 
 	 	spanA.appendChild(tA);  
 	 	document.getElementById("letterCount").appendChild(spanA);
-}
+	 	btnA.disable = true;
+	}	
 	 else {
 	 	// document.getElementById("currentWord").innerHTML = btn.value;
 	 	var textnodeA = document.createTextNode("A");
@@ -545,7 +642,7 @@ btnY.onclick = function printValue() {
 	 }
 	 else {
 	 	// document.getElementById("currentWord").innerHTML = btn.value;
-	 	var textnodeY = document.createTextNode("y");
+	 	var textnodeY = document.createTextNode("Y");
 	 	var itemY = document.getElementById("currentWord").childNodes[letterPlacement];
 	 	itemY.replaceChild(textnodeY, itemY.childNodes[0]);
 	 }
@@ -574,12 +671,7 @@ btnZ.onclick = function printValue() {
 
 // When a letter is pressed it needs disappear & count against the guesses
 
-
-
-
-// Stick Figure
-
-//
+     
 
 // When the game is over (either by too many tries or winning), need to change 
 // the hangman to "you win!" or "you lose!"

@@ -28,9 +28,9 @@ img {
 	margin-right: .5em;
 }
 
-.hangmanBox {
-	width: 90%;
-	padding: 8em;
+#hangmanBox {
+	height: 300px;
+	width: 500px;
 	text-align: center; 
 }
 
