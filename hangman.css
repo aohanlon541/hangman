@@ -36,7 +36,6 @@ img {
 
 .row {
 	opacity: 0.95;
-
 }
 
 #currentWord, .panel-body {
@@ -57,8 +56,11 @@ footer {
 	padding: 20px;
 	background-color: #333;
 	color: white;
-	margin-top: 5em;
-	position: relative;
+	margin-top: 10em;
+	position: absolute;
+	right: 0;
+	left: 0;
+	bottom: 0;
 	width: 100%;
 	font-family: 'Open Sans Condensed', sans-serif;
 

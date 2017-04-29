@@ -23,7 +23,7 @@ var tries = 10;
 var youLoseHtml = ("<p>You lose!</p>");
 
 //function to subtract tries 
-
+			
  
 function subtractTries() { 
 	if (tries > 0) {
@@ -31,6 +31,7 @@ function subtractTries() {
 		console.log(tries);
 		var triesCountHtml = ("<p>" + tries + " tries left </p>");
 		document.getElementById("triesCount").innerHTML = triesCountHtml;
+		
 			if (tries === 8) {
 				lineOne();
 			}
@@ -57,11 +58,7 @@ function subtractTries() {
 				lineEight();
 			}
 			else if (tries === 0) {
-				lineNine();
-				var triesCountHtml = ("");
-				var newDiv = document.createElement("div");
-				var textnode = document.createTextNode(triesCountHtml);
-				document.getElementById("hangmanBox").appendChild(node);    
+				lineNine();   
 			}
 
 	}
@@ -143,6 +140,7 @@ function lineNine() {
   context.lineTo(280, 120);
   context.stroke();
   };
+
 
 // var btnLetter = document.getElementsByClassName("buttonAbc");
 // for (i = 0; i < alphabet.length; i++) {
